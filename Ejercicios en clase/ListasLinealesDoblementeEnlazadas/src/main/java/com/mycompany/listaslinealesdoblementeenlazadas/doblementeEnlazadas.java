@@ -5,7 +5,7 @@ public class doblementeEnlazadas {
     public static void main(String[] args) {
         Scanner consola= new Scanner(System.in);
         int bandera=0, bander1=0;
-        int op=1, opc1=1;
+        int opc=1, opc1=1;
         
         Lista P= new Lista();
         Lista Q= new Lista();
@@ -18,10 +18,25 @@ public class doblementeEnlazadas {
         nodo n= new nodo();//Para crear un nuevo nodo
         
         //Esto es una doblemente enlazada
-
-        
-        
-        
+        while(opc!=0){
+            if(bandera==0){
+                n= new nodo();//Creamos un nuevo nodo
+                System.out.println("Digite el valor del nodo");
+                n.info=consola.nextInt();
+                P.primero= r=n;
+                n.anterior= n.siguiente= null;
+            }else{
+                r=n;
+                n= new nodo(); //Creamos un nuevo nodo
+                System.out.println("Digite el valor del nodo");
+                n.info= consola.nextInt();
+                n.anterior= r;
+                r.siguiente=n;
+            }
+            System.out.println("Desea crear otro nodo 1=sí, 0=no");
+            opc= consola.nextInt();
+        }
+        P.imprimirLista();
     }
     private static class nodo{
         int info;
