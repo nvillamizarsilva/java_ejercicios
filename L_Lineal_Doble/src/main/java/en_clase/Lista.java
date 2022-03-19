@@ -66,6 +66,7 @@ public class Lista {
             System.out.println(aux.getValor());
             aux=aux.getSiguiente();
         }
+        System.out.println("Valor nodo"+ aux.getValor());
     }
     
     public void mostrarAtras(){
@@ -82,5 +83,33 @@ public class Lista {
     }
     //Adicionales-------------------------------------------------------------------------
     
+    //Transformar una lista lineal en circular
+    public void calcularCantidadPares(){
+       if(esVacia()){
+            System.out.println("La lista está vacía");
+            return;
+        }
+       retroceder();
+       Nodo aux= this.cabecera;
+       int contador=0;
+       while(aux!=null){
+           if(aux.getValor()%2==0){
+               contador++;
+               aux=aux.getSiguiente();
+           }
+       }
+        System.out.println("La cantidad de números pares es:  "+ contador);
+    }
+    
+    public void siguiente(){
+       Nodo r= new Nodo();
+        adelantar();
+        r.getSiguiente();
+    }
+    
+    
+  
     
 }
+
+
