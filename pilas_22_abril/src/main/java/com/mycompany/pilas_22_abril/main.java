@@ -1,10 +1,24 @@
 
 package com.mycompany.pilas_22_abril;
-
+import javax.swing.JFrame;
 import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
+        Scanner consola=new Scanner(System.in);
         Pila Edades = new Pila();
+        
+
+        System.out.println("Ingrese 1 si desea crear un nodo nuevo o 2 para acabar el  proceso --> ");
+        int respuesta= consola.nextInt();
+        
+        
+        if(respuesta==1){
+            System.out.println("Ingrese el valor del nodo");
+            Edades.PUSH(consola.nextInt());
+            System.out.println("Ingrese 1 si desea crear un nodo nuevo o 2 para acabar el  proceso --> ");
+            
+        }
+        
         Edades.PUSH(28);
         Edades.PUSH(23);
         Edades.PUSH(24);
@@ -25,6 +39,7 @@ public class main {
         
         
         }
+    
         
 //_______________________________________________________________________
     public static class Pila{

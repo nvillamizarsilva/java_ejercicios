@@ -230,7 +230,7 @@ public static class Lista{
     }
         public static class nodo{
             int info;
-            nodo siguiente;
+            nodo siguiente, anterior;
             
             public boolean Espar(){
                 if(info %2==0)
