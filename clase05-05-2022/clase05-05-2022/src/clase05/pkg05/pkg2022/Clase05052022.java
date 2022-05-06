@@ -12,31 +12,30 @@ public class Clase05052022 {
     p.insert(14);
     p.insert(15);
     p.insert(16);
+    p.ActualizarFront();
+    p.ActualizarRear();
         System.out.println("Front es " + p.front);
         System.out.println("Rear es " + p.rear);
     nodo dato= new nodo();
 
-//        b.Primero=p.Primero;
-//        while(b.Primero!=null){
-//            System.out.println(dato.info);
-//            p.Primero=p.Primero.siguiente;
-//        }
-//        while(!p.EstaVacia()){
-//            dato=p.remove();
-//            System.out.println(dato.info);
-//        }
-    int par=0, ban=1, impar=0;
-    while(!p.EstaVacia()){
-        dato=p.remove();
-        if(dato.Espar() && ban==1){
-            par=dato.info;
-            ban=0;
+        b.Primero=p.Primero;
+      
+        while(!p.EstaVacia()){
+            dato=p.remove();
+            System.out.println(dato.info);
         }
-        if(!dato.Espar()){
-            impar=dato.info;
-        }
-    }
-    System.out.println("La suma es "+ (par + impar));
+//    int par=0, ban=1, impar=0;
+//    while(!p.EstaVacia()){
+//        dato=p.remove();
+//        if(dato.Espar() && ban==1){
+//            par=dato.info;
+//            ban=0;
+//        }
+//        if(!dato.Espar()){
+//            impar=dato.info;
+//        }
+//    }
+//    System.out.println("La suma es "+ (par + impar));
 }
 
 
@@ -51,7 +50,7 @@ public static class Cola{
    public int front;
    
    private void ActualizarFront(){
-       
+       front=Stackfront();
    }
    
    public int Stackfront(){
